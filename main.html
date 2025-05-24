@@ -10,6 +10,7 @@
         /* Custom styles for better vertical centering and appearance */
         body, html {
             height: 100%;
+            font-size: 16px;
         }
         body {
             display: flex;
@@ -32,13 +33,14 @@
             border: 1px solid #dee2e6; /* Optional border for the image */
             border-radius: 0.25rem;
         }
-        h1 {
+        h1.title {
             font-weight: 300; 
             color: #343a40;
+            font-size: 3rem;
         }
-        p.lead {
+        p.msg {
             color: #6c757d; /* Muted color for the message */
-            font-size: 25px;
+            font-size: 2rem;
         }
 
         @media (min-width: 768px) {
@@ -51,7 +53,7 @@
 <body>
 
     <div class="content-wrapper text-center">
-        <h1 class="display-5 mb-4">服务更新中，<br />敬请期待！</h1>
+        <h1 class="display-5 title mb-4">服务更新中，<br />敬请期待！</h1>
 
         <img src="hnyzWechatQrcode3.jpg"
              alt="咨询二维码"
@@ -62,7 +64,7 @@
             <img src="your-qr-code.png" alt="咨询二维码" class="img-fluid qr-code-img my-4">
         -->
 
-        <p class="lead mt-3">有任何疑问欢迎扫码咨询!</p>
+        <p class="lead msg mt-3">有任何疑问欢迎扫码咨询!</p>
     </div>
 
     <!-- Bootstrap Bundle with Popper -->
