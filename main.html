@@ -18,12 +18,8 @@
             background-color: #f8f9fa;
         }
 
-        /* Optional: Add padding to main content if navbar becomes fixed-top later */
-        /* main { padding-top: 70px; } /* Adjust if navbar height changes */
-
         header .navbar {
             /* You can add custom navbar styles here if needed */
-            /* e.g., border-bottom: 1px solid #dee2e6; */
         }
 
         main {
@@ -41,8 +37,8 @@
             background-color: #ffffff;
             border-radius: 0.5rem;
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-            margin-top: 20px; /* Add some space if content is too close to a static navbar */
-            margin-bottom: 20px; /* Add some space if content is too close to footer */
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
         .qr-code-img {
             max-width: 200px;
@@ -66,9 +62,33 @@
             font-size: 0.875rem;
         }
 
+        /* Ensure brand and nav links have some spacing */
+        .navbar-brand {
+            margin-right: 1rem; /* Add some space between brand and the first nav link */
+        }
+
+        /* Remove the focus box-shadow from the navbar toggler button */
+        .navbar-toggler:focus {
+            box-shadow: none;
+            /* outline: 0; /* Also ensures no default browser outline, though Bootstrap usually handles this */
+        }
+        /* If you also want to remove the default border that's always present on the toggler: */
+        /*
+        .navbar-toggler {
+            border: none;
+        }
+        */
+
+
         @media (min-width: 768px) {
             .content-wrapper {
                 padding: 3rem;
+            }
+        }
+         /* On smaller screens (when navbar collapses), ensure brand is not overly pushed by toggler */
+        @media (max-width: 991.98px) { /* Bootstrap's lg breakpoint */
+            .navbar-brand {
+                margin-right: 0.5rem;
             }
         }
     </style>
@@ -78,12 +98,11 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="#">海宁一洲</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <!-- <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">首页</a>
                         </li>
@@ -97,7 +116,7 @@
                             <a class="nav-link" href="#">联系方式</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </nav>
     </header>
